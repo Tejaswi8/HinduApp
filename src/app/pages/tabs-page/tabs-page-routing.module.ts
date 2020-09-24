@@ -67,6 +67,24 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'mahabharath',
+        children: [
+          {
+            path: '',
+            loadChildren: () => import('../mahabharath/mahabharath.module').then(m => m.MahabharathModule)
+          }
+        ]
+      },
+      {
+        path: 'bhagavadGeetha',
+        children: [
+          {
+            path: '',
+            loadChildren: () => import('../bhagavadGeetha/bhagavadGeetha.module').then(m => m.BhagavadGeethaModule)
+          }
+        ]
+      },
+      {
         path: '',
         redirectTo: '/app/tabs/schedule',
         pathMatch: 'full'

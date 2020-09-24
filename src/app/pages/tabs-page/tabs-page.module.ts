@@ -7,6 +7,8 @@ import { TabsPageRoutingModule } from './tabs-page-routing.module';
 
 import { AboutModule } from '../about/about.module';
 import { RamayanModule } from '../ramayan/ramayan.module';
+import { MahabharathModule } from '../mahabharath/mahabharath.module';
+import { BhagavadGeethaModule } from '../bhagavadGeetha/bhagavadGeetha.module';
 import { MapModule } from '../map/map.module';
 import { ScheduleModule } from '../schedule/schedule.module';
 import { SessionDetailModule } from '../session-detail/session-detail.module';
@@ -17,6 +19,8 @@ import { SpeakerListModule } from '../speaker-list/speaker-list.module';
   imports: [
     AboutModule,
     RamayanModule,
+    MahabharathModule,
+    BhagavadGeethaModule,
     CommonModule,
     IonicModule,
     MapModule,

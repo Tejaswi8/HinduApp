@@ -56,12 +56,12 @@ export class AppComponent implements OnInit {
     },
     {
       title: 'MAHA BHARATH',
-      url: '/app/tabs/about',
+      url: '/app/tabs/mahabharath',
       icon: 'book'
     },
     {
       title: 'BHAGAVAD GITA',
-      url: '/app/tabs/about',
+      url: '/app/tabs/bhagavadGeetha',
       icon: 'book'
     }
   ];
