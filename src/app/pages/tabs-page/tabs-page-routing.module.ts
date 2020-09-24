@@ -58,6 +58,15 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'ramayan',
+        children: [
+          {
+            path: '',
+            loadChildren: () => import('../ramayan/ramayan.module').then(m => m.RamayanModule)
+          }
+        ]
+      },
+      {
         path: '',
         redirectTo: '/app/tabs/schedule',
         pathMatch: 'full'

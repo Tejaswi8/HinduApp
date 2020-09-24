@@ -20,24 +20,49 @@ import { UserData } from './providers/user-data';
 export class AppComponent implements OnInit {
   appPages = [
     {
-      title: 'Schedule',
+      title: 'YUGAS',
       url: '/app/tabs/schedule',
-      icon: 'calendar'
+      icon: 'clock'
     },
     {
-      title: 'Speakers',
+      title: 'VEDAS',
+      url: '/app/tabs/speakers',
+      icon: 'people'
+    },
+    // {
+    //   title: 'WILL REPLACE ...',
+    //   url: '/app/tabs/map',
+    //   icon: 'map'
+    // },
+    {
+      title: 'LOKAS',
+      url: '/app/tabs/about',
+      icon: 'cloudy-night'
+    },
+    {
+      title: 'AVATARAS',
+      url: '/app/tabs/about',
+      icon: 'people'
+    },
+    {
+      title: 'DHASHAVATHARAS',
       url: '/app/tabs/speakers',
       icon: 'people'
     },
     {
-      title: 'Map',
-      url: '/app/tabs/map',
-      icon: 'map'
+      title: 'RAMAYAN',
+      url: '/app/tabs/ramayan',
+      icon: 'book'
     },
     {
-      title: 'About',
+      title: 'MAHA BHARATH',
       url: '/app/tabs/about',
-      icon: 'information-circle'
+      icon: 'book'
+    },
+    {
+      title: 'BHAGAVAD GITA',
+      url: '/app/tabs/about',
+      icon: 'book'
     }
   ];
   loggedIn = false;
