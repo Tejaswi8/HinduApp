@@ -40,6 +40,23 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'avtaras',
+        children: [
+          {
+            path: '',
+            loadChildren: () => import('../avtaras-list/avtaras-list.module').then(m => m.AvtarasListModule)
+          },
+          {
+            path: 'session/:sessionId',
+            loadChildren: () => import('../session-detail/session-detail.module').then(m => m.SessionDetailModule)
+          },
+          {
+            path: 'avtaras-details/:avtarasId',
+            loadChildren: () => import('../avtaras-detail/avtaras-detail.module').then(m => m.AvtarasDetailModule)
+          }
+        ]
+      },
+      {
         path: 'map',
         children: [
           {

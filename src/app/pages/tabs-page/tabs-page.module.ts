@@ -14,6 +14,8 @@ import { ScheduleModule } from '../schedule/schedule.module';
 import { SessionDetailModule } from '../session-detail/session-detail.module';
 import { VedasDetailModule } from '../vedas-detail/vedas-detail.module';
 import { VedasListModule } from '../vedas-list/vedas-list.module';
+import { AvtarasDetailModule } from '../avtaras-detail/avtaras-detail.module';
+import { AvtarasListModule } from '../avtaras-list/avtaras-list.module';
 
 @NgModule({
   imports: [
@@ -28,6 +30,8 @@ import { VedasListModule } from '../vedas-list/vedas-list.module';
     SessionDetailModule,
     VedasDetailModule,
     VedasListModule,
+    AvtarasDetailModule,
+    AvtarasListModule,
     TabsPageRoutingModule
   ],
   declarations: [

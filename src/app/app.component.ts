@@ -39,14 +39,14 @@ export class AppComponent implements OnInit {
       url: '/app/tabs/about',
       icon: 'cloudy-night'
     },
-    {
-      title: 'AVATARAS',
-      url: '/app/tabs/about',
-      icon: 'people'
-    },
+    // {
+    //   title: 'AVATARAS',
+    //   url: '/app/tabs/about',
+    //   icon: 'people'
+    // },
     {
       title: 'DHASHAVATHARAS',
-      url: '/app/tabs/vedas',
+      url: '/app/tabs/avtaras',
       icon: 'people'
     },
     {
