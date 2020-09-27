@@ -26,7 +26,7 @@ export class AppComponent implements OnInit {
     },
     {
       title: 'VEDAS',
-      url: '/app/tabs/speakers',
+      url: '/app/tabs/vedas',
       icon: 'people'
     },
     // {
@@ -46,7 +46,7 @@ export class AppComponent implements OnInit {
     },
     {
       title: 'DHASHAVATHARAS',
-      url: '/app/tabs/speakers',
+      url: '/app/tabs/vedas',
       icon: 'people'
     },
     {

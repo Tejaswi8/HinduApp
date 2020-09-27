@@ -1,4 +1,4 @@
-.speaker-card {
+.vedas-card {
   display: flex;
   flex-direction: column;
 }
@@ -6,30 +6,30 @@
 /* Due to the fact the cards are inside of columns the margins don't overlap
  * properly so we want to remove the extra margin between cards
  */
-ion-col:not(:last-of-type) .speaker-card {
+ion-col:not(:last-of-type) .vedas-card {
   margin-bottom: 0;
 }
 
-.speaker-card .speaker-item {
+.vedas-card .vedas-item {
   --min-height: 85px;
 }
 
-.speaker-card .speaker-item h2 {
+.vedas-card .vedas-item h2 {
   font-size: 18px;
   font-weight: 500;
   letter-spacing: 0.02em;
 }
 
-.speaker-card .speaker-item p {
+.vedas-card .vedas-item p {
   font-size: 13px;
   letter-spacing: 0.02em;
 }
 
-.speaker-card ion-card-header {
+.vedas-card ion-card-header {
   padding: 0;
 }
 
-.speaker-card ion-card-content {
+.vedas-card ion-card-content {
   flex: 1 1 auto;
 
   padding: 0;
