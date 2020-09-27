@@ -1,7 +1,7 @@
 {
-  "name": "ionic-conference-app",
+  "name": "ionic-hindu-mythology-app",
   "version": "0.0.0",
-  "description": "Ionic Conference App",
+  "description": "HinduMythology App",
   "author": "Ionic Team <hi@ionicframework.com>",
   "license": "Apache-2.0",
   "scripts": {
