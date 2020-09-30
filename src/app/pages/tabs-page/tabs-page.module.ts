@@ -10,7 +10,7 @@ import { RamayanModule } from '../ramayan/ramayan.module';
 import { MahabharathModule } from '../mahabharath/mahabharath.module';
 import { BhagavadGeethaModule } from '../bhagavadGeetha/bhagavadGeetha.module';
 import { MapModule } from '../map/map.module';
-import { ScheduleModule } from '../schedule/schedule.module';
+import { YugasModule } from '../yugas/yugas.module';
 import { SessionDetailModule } from '../session-detail/session-detail.module';
 import { VedasDetailModule } from '../vedas-detail/vedas-detail.module';
 import { VedasListModule } from '../vedas-list/vedas-list.module';
@@ -26,7 +26,7 @@ import { AvtarasListModule } from '../avtaras-list/avtaras-list.module';
     CommonModule,
     IonicModule,
     MapModule,
-    ScheduleModule,
+    YugasModule,
     SessionDetailModule,
     VedasDetailModule,
     VedasListModule,

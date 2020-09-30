@@ -5,11 +5,11 @@ import { ConferenceData } from '../../providers/conference-data';
 
 
 @Component({
-  selector: 'page-schedule-filter',
-  templateUrl: 'schedule-filter.html',
-  styleUrls: ['./schedule-filter.scss'],
+  selector: 'page-yugas-filter',
+  templateUrl: 'yugas-filter.html',
+  styleUrls: ['./yugas-filter.scss'],
 })
-export class ScheduleFilterPage {
+export class YugasFilterPage {
   ios: boolean;
 
   tracks: {name: string, icon: string, isChecked: boolean}[] = [];

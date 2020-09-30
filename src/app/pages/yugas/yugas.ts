@@ -2,18 +2,18 @@ import { Component, ViewChild, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AlertController, IonList, IonRouterOutlet, LoadingController, ModalController, ToastController, Config } from '@ionic/angular';
 
-import { ScheduleFilterPage } from '../schedule-filter/schedule-filter';
+import { YugasFilterPage } from '../yugas-filter/yugas-filter';
 import { ConferenceData } from '../../providers/conference-data';
 import { UserData } from '../../providers/user-data';
 
 @Component({
-  selector: 'page-schedule',
-  templateUrl: 'schedule.html',
-  styleUrls: ['./schedule.scss'],
+  selector: 'page-yugas',
+  templateUrl: 'yugas.html',
+  styleUrls: ['./yugas.scss'],
 })
-export class SchedulePage implements OnInit {
+export class YugasPage implements OnInit {
   // Gets a reference to the list element
-  @ViewChild('scheduleList', { static: true }) scheduleList: IonList;
+  @ViewChild('YugasList', { static: true }) YugasList: IonList;
 
   ios: boolean;
   dayIndex = 0;
@@ -38,15 +38,15 @@ export class SchedulePage implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.updateSchedule();
+    this.updateyugas();
 
     this.ios = this.config.get('mode') === 'ios';
   }
 
-  updateSchedule() {
-    // Close any open sliding items when the schedule updates
-    if (this.scheduleList) {
-      this.scheduleList.closeSlidingItems();
+  updateyugas() {
+    // Close any open sliding items when the yugas updates
+    if (this.YugasList) {
+      this.YugasList.closeSlidingItems();
     }
 
     this.confData.getTimeline(this.dayIndex, this.queryText, this.excludeTracks, this.segment).subscribe((data: any) => {
@@ -57,7 +57,7 @@ export class SchedulePage implements OnInit {
 
   async presentFilter() {
     const modal = await this.modalCtrl.create({
-      component: ScheduleFilterPage,
+      component: YugasFilterPage,
       swipeToClose: true,
       presentingElement: this.routerOutlet.nativeEl,
       componentProps: { excludedTracks: this.excludeTracks }
@@ -67,7 +67,7 @@ export class SchedulePage implements OnInit {
     const { data } = await modal.onWillDismiss();
     if (data) {
       this.excludeTracks = data;
-      this.updateSchedule();
+      this.updateyugas();
     }
   }
 
@@ -116,7 +116,7 @@ export class SchedulePage implements OnInit {
           handler: () => {
             // they want to remove this session from their favorites
             this.user.removeFavorite(sessionData.name);
-            this.updateSchedule();
+            this.updateyugas();
 
             // close the sliding item and hide the option buttons
             slidingItem.close();

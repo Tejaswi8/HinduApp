@@ -3,23 +3,23 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
-import { SchedulePage } from './schedule';
-import { ScheduleFilterPage } from '../schedule-filter/schedule-filter';
-import { SchedulePageRoutingModule } from './schedule-routing.module';
+import { YugasPage } from './yugas';
+import { YugasFilterPage } from '../yugas-filter/yugas-filter';
+import { YugasPageRoutingModule } from './yugas-routing.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    SchedulePageRoutingModule
+    YugasPageRoutingModule
   ],
   declarations: [
-    SchedulePage,
-    ScheduleFilterPage
+    YugasPage,
+    YugasFilterPage
   ],
   entryComponents: [
-    ScheduleFilterPage
+    YugasFilterPage
   ]
 })
-export class ScheduleModule { }
+export class YugasModule { }

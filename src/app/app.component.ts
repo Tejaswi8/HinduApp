@@ -21,7 +21,7 @@ export class AppComponent implements OnInit {
   appPages = [
     {
       title: 'YUGAS',
-      url: '/app/tabs/schedule',
+      url: '/app/tabs/yugas',
       icon: 'clock'
     },
     {
@@ -142,7 +142,7 @@ export class AppComponent implements OnInit {
 
   logout() {
     this.userData.logout().then(() => {
-      return this.router.navigateByUrl('/app/tabs/schedule');
+      return this.router.navigateByUrl('/app/tabs/yugas');
     });
   }
 
