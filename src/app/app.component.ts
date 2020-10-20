@@ -22,7 +22,7 @@ export class AppComponent implements OnInit {
     {
       title: 'YUGAS',
       url: '/app/tabs/yugas',
-      icon: 'clock'
+      icon: 'cloudy-night'
     },
     {
       title: 'VEDAS',

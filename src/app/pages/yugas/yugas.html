@@ -1,23 +1,23 @@
 <ion-header translucent="true">
   <ion-toolbar>
-    <ion-buttons *ngIf="!showSearchbar" slot="start">
-      <ion-menu-button></ion-menu-button>
+    <ion-buttons class="side-menu-title1" *ngIf="!showSearchbar" slot="start">
+      <ion-menu-button  class="side-menu-title1"></ion-menu-button>
     </ion-buttons>
     <ion-segment *ngIf="ios" [(ngModel)]="segment" (ionChange)="updateyugas()">
-      <ion-segment-button value="all">
+      <ion-segment-button class="side-menu-title1" value="all">
         All
       </ion-segment-button>
-      <ion-segment-button value="favorites">
+      <ion-segment-button class="side-menu-title1" value="favorites">
         Favorites
       </ion-segment-button>
     </ion-segment>
-    <ion-title *ngIf="!ios && !showSearchbar">Yugas</ion-title>
+    <ion-title class="side-menu-title1" *ngIf="!ios && !showSearchbar">Yugas</ion-title>
     <ion-searchbar *ngIf="showSearchbar" showCancelButton="always" [(ngModel)]="queryText" (ionChange)="updateyugas()" (ionCancel)="showSearchbar = false" placeholder="Search"></ion-searchbar>
     <ion-buttons slot="end">
       <ion-button *ngIf="!ios && !showSearchbar" (click)="showSearchbar = true">
-        <ion-icon slot="icon-only" name="search"></ion-icon>
+        <ion-icon class="side-menu-title1" slot="icon-only" name="search"></ion-icon>
       </ion-button>
-      <ion-button *ngIf="!showSearchbar" (click)="presentFilter()">
+      <ion-button class="side-menu-title1" *ngIf="!showSearchbar" (click)="presentFilter()">
         <span *ngIf="ios">Filter</span>
         <span *ngIf="!ios">
           <ion-icon slot="icon-only" name="options"></ion-icon>
@@ -27,10 +27,10 @@
   </ion-toolbar>
   <ion-toolbar *ngIf="!ios">
     <ion-segment [(ngModel)]="segment" (ionChange)="updateyugas()">
-      <ion-segment-button value="all">
+      <ion-segment-button class="side-menu-title1" value="all">
         All
       </ion-segment-button>
-      <ion-segment-button value="favorites">
+      <ion-segment-button class="side-menu-title1" value="favorites">
         Favorites
       </ion-segment-button>
     </ion-segment>
@@ -38,22 +38,19 @@
 </ion-header>
 
 <ion-content fullscreen="true">
-  <div class="support-logo">
-    <img src="assets/img/vedas/yugas.jpg" alt="Ionic Logo">
-  </div>
-  <ion-header collapse="condense">
+  <ion-header class="side-menu-title1" collapse="condense">
     <ion-toolbar>
       <ion-title size="large">Yugas</ion-title>
     </ion-toolbar>
     <ion-toolbar>
-      <ion-searchbar [(ngModel)]="queryText" (ionChange)="updateyugas()" placeholder="Search"></ion-searchbar>
+      <ion-searchbar class="side-menu-title1" [(ngModel)]="queryText" (ionChange)="updateyugas()" placeholder="Search"></ion-searchbar>
     </ion-toolbar>
   </ion-header>
 
   <ion-list #yugasList [hidden]="shownSessions === 0">
     <ion-item-group *ngFor="let group of groups" [hidden]="group.hide">
       <ion-item-divider sticky>
-        <ion-label>
+        <ion-label class="side-menu-title1">
           {{group.time}}
         </ion-label>
       </ion-item-divider>
@@ -61,7 +58,7 @@
       <ion-item-sliding *ngFor="let session of group.sessions" #slidingItem [attr.track]="session.tracks[0] | lowercase"
         [hidden]="session.hide">
         <ion-item routerLink="/app/tabs/yugas/session/{{session.id}}">
-          <ion-label>
+          <ion-label class="side-menu-title1">
             <h3>{{session.name}}</h3>
             <p>
               {{session.timeStart}} &mdash; {{session.timeEnd}}: {{session.location}}
@@ -80,6 +77,9 @@
       </ion-item-sliding>
     </ion-item-group>
   </ion-list>
+  <div class="support-logo">
+    <img class="yuga-image" src="assets/img/vedas/yugas.jpg" alt="Ionic Logo">
+  </div>
 
   <ion-list-header [hidden]="shownSessions > 0">
     No Sessions Found

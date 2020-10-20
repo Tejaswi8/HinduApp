@@ -85,3 +85,23 @@ ion-menu.ios ion-item ion-icon {
 ion-menu.ios ion-item.selected ion-icon {
   color: var(--ion-color-primary);
 }
+
+.side-menu-title{
+  font-style: oblique;
+  font-family: cursive !important;
+  color:#ffdf00 !important;
+  font-weight: 600;
+  font-size: large !important;
+}
+
+.side-menu-title1{
+  font-style: oblique;
+  font-family: cursive !important;
+  color: #fdc72d!important;
+  font-weight: 600;
+  font-size: x-large !important;
+}
+
+.side-menu-icon{
+  color: #fdc72d;
+}
